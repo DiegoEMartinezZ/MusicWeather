@@ -20,8 +20,7 @@
     "dotenv": "^16.4.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.23.1",
-    "vite-plugin-require": "^1.2.14"
+    "react-router-dom": "^6.23.1"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",
