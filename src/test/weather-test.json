@@ -1,0 +1,277 @@
+[
+  {
+    "country": "Italy",
+    "code": "IT",
+    "cities": [
+      { "name": "Rome", "lat": 41.9028, "lon": 12.4964 },
+      { "name": "Milan", "lat": 45.4642, "lon": 9.19 },
+      { "name": "Naples", "lat": 40.8518, "lon": 14.2681 },
+      { "name": "Turin", "lat": 45.0703, "lon": 7.6869 },
+      { "name": "Palermo", "lat": 38.1157, "lon": 13.3615 }
+    ]
+  },
+  {
+    "country": "Netherlands",
+    "code": "NL",
+    "cities": [
+      { "name": "Amsterdam", "lat": 52.3676, "lon": 4.9041 },
+      { "name": "Rotterdam", "lat": 51.9225, "lon": 4.4791 },
+      { "name": "The Hague", "lat": 52.0705, "lon": 4.3007 },
+      { "name": "Utrecht", "lat": 52.0907, "lon": 5.1214 },
+      { "name": "Eindhoven", "lat": 51.4416, "lon": 5.4697 }
+    ]
+  },
+  {
+    "country": "Sweden",
+    "code": "SE",
+    "cities": [
+      { "name": "Stockholm", "lat": 59.3293, "lon": 18.0686 },
+      { "name": "Gothenburg", "lat": 57.7089, "lon": 11.9746 },
+      { "name": "Malmö", "lat": 55.6049, "lon": 13.0038 },
+      { "name": "Uppsala", "lat": 59.8586, "lon": 17.6389 },
+      { "name": "Västerås", "lat": 59.6099, "lon": 16.5448 }
+    ]
+  },
+  {
+    "country": "Switzerland",
+    "code": "CH",
+    "cities": [
+      { "name": "Zurich", "lat": 47.3769, "lon": 8.5417 },
+      { "name": "Geneva", "lat": 46.2044, "lon": 6.1432 },
+      { "name": "Basel", "lat": 47.5596, "lon": 7.5886 },
+      { "name": "Lausanne", "lat": 46.5197, "lon": 6.6323 },
+      { "name": "Bern", "lat": 46.9481, "lon": 7.4474 }
+    ]
+  },
+  {
+    "country": "Norway",
+    "code": "NO",
+    "cities": [
+      { "name": "Oslo", "lat": 59.9139, "lon": 10.7522 },
+      { "name": "Bergen", "lat": 60.392, "lon": 5.3242 },
+      { "name": "Stavanger", "lat": 58.969, "lon": 5.7331 },
+      { "name": "Trondheim", "lat": 63.4305, "lon": 10.3951 },
+      { "name": "Drammen", "lat": 59.7439, "lon": 10.2045 }
+    ]
+  },
+  {
+    "country": "Finland",
+    "code": "FI",
+    "cities": [
+      { "name": "Helsinki", "lat": 60.1695, "lon": 24.9354 },
+      { "name": "Espoo", "lat": 60.2055, "lon": 24.6559 },
+      { "name": "Tampere", "lat": 61.4978, "lon": 23.761 },
+      { "name": "Vantaa", "lat": 60.2934, "lon": 25.0378 },
+      { "name": "Oulu", "lat": 65.0121, "lon": 25.4651 }
+    ]
+  },
+  {
+    "country": "Denmark",
+    "code": "DK",
+    "cities": [
+      { "name": "Copenhagen", "lat": 55.6761, "lon": 12.5683 },
+      { "name": "Aarhus", "lat": 56.1629, "lon": 10.2039 },
+      { "name": "Odense", "lat": 55.4038, "lon": 10.4024 },
+      { "name": "Aalborg", "lat": 57.0467, "lon": 9.9359 },
+      { "name": "Esbjerg", "lat": 55.4765, "lon": 8.4594 }
+    ]
+  },
+  {
+    "country": "New Zealand",
+    "code": "NZ",
+    "cities": [
+      { "name": "Auckland", "lat": -36.8485, "lon": 174.7633 },
+      { "name": "Wellington", "lat": -41.2865, "lon": 174.7762 },
+      { "name": "Christchurch", "lat": -43.5321, "lon": 172.6362 },
+      { "name": "Hamilton", "lat": -37.787, "lon": 175.2793 },
+      { "name": "Tauranga", "lat": -37.6878, "lon": 176.1651 }
+    ]
+  },
+  {
+    "country": "Austria",
+    "code": "AT",
+    "cities": [
+      { "name": "Vienna", "lat": 48.2082, "lon": 16.3738 },
+      { "name": "Graz", "lat": 47.0707, "lon": 15.4395 },
+      { "name": "Linz", "lat": 48.3069, "lon": 14.2858 },
+      { "name": "Salzburg", "lat": 47.8095, "lon": 13.055 },
+      { "name": "Innsbruck", "lat": 47.2692, "lon": 11.4041 }
+    ]
+  },
+  {
+    "country": "Belgium",
+    "code": "BE",
+    "cities": [
+      { "name": "Brussels", "lat": 50.8503, "lon": 4.3517 },
+      { "name": "Antwerp", "lat": 51.2194, "lon": 4.4025 },
+      { "name": "Ghent", "lat": 51.0543, "lon": 3.7174 },
+      { "name": "Charleroi", "lat": 50.4108, "lon": 4.4446 },
+      { "name": "Liège", "lat": 50.6326, "lon": 5.5797 }
+    ]
+  },
+  {
+    "country": "Brazil",
+    "code": "BR",
+    "cities": [
+      { "name": "São Paulo", "lat": -23.5505, "lon": -46.6333 },
+      { "name": "Rio de Janeiro", "lat": -22.9068, "lon": -43.1729 },
+      { "name": "Brasília", "lat": -15.8267, "lon": -47.9218 },
+      { "name": "Salvador", "lat": -12.9777, "lon": -38.5016 },
+      { "name": "Fortaleza", "lat": -3.7172, "lon": -38.5434 }
+    ]
+  },
+  {
+    "country": "Argentina",
+    "code": "AR",
+    "cities": [
+      { "name": "Buenos Aires", "lat": -34.6037, "lon": -58.3816 },
+      { "name": "Córdoba", "lat": -31.4201, "lon": -64.1888 },
+      { "name": "Rosario", "lat": -32.9468, "lon": -60.6393 },
+      { "name": "Mendoza", "lat": -32.8895, "lon": -68.8458 },
+      { "name": "La Plata", "lat": -34.9205, "lon": -57.9536 }
+    ]
+  },
+  {
+    "country": "United States",
+    "code": "US",
+    "cities": [
+      { "name": "New York", "lat": 40.7128, "lon": -74.006 },
+      { "name": "Los Angeles", "lat": 34.0522, "lon": -118.2437 },
+      { "name": "Chicago", "lat": 41.8781, "lon": -87.6298 },
+      { "name": "Houston", "lat": 29.7604, "lon": -95.3698 },
+      { "name": "Phoenix", "lat": 33.4484, "lon": -112.074 }
+    ]
+  },
+  {
+    "country": "Canada",
+    "code": "CA",
+    "cities": [
+      { "name": "Toronto", "lat": 43.6511, "lon": -79.3837 },
+      { "name": "Vancouver", "lat": 49.2827, "lon": -123.1207 },
+      { "name": "Montreal", "lat": 45.5017, "lon": -73.5673 },
+      { "name": "Calgary", "lat": 51.0447, "lon": -114.0719 },
+      { "name": "Ottawa", "lat": 45.4215, "lon": -75.6972 }
+    ]
+  },
+  {
+    "country": "Germany",
+    "code": "DE",
+    "cities": [
+      { "name": "Berlin", "lat": 52.52, "lon": 13.405 },
+      { "name": "Munich", "lat": 48.1351, "lon": 11.582 },
+      { "name": "Frankfurt", "lat": 50.1109, "lon": 8.6821 },
+      { "name": "Hamburg", "lat": 53.5511, "lon": 9.9937 },
+      { "name": "Cologne", "lat": 50.9375, "lon": 6.9603 }
+    ]
+  },
+  {
+    "country": "United Kingdom",
+    "code": "GB",
+    "cities": [
+      { "name": "London", "lat": 51.5074, "lon": -0.1278 },
+      { "name": "Manchester", "lat": 53.4808, "lon": -2.2426 },
+      { "name": "Birmingham", "lat": 52.4862, "lon": -1.8904 },
+      { "name": "Liverpool", "lat": 53.4084, "lon": -2.9916 },
+      { "name": "Edinburgh", "lat": 55.9533, "lon": -3.1883 }
+    ]
+  },
+  {
+    "country": "Australia",
+    "code": "AU",
+    "cities": [
+      { "name": "Sydney", "lat": -33.8688, "lon": 151.2093 },
+      { "name": "Melbourne", "lat": -37.8136, "lon": 144.9631 },
+      { "name": "Brisbane", "lat": -27.4698, "lon": 153.0251 },
+      { "name": "Perth", "lat": -31.9505, "lon": 115.8605 },
+      { "name": "Adelaide", "lat": -34.9285, "lon": 138.6007 }
+    ]
+  },
+  {
+    "country": "Japan",
+    "code": "JP",
+    "cities": [
+      { "name": "Tokyo", "lat": 35.6762, "lon": 139.6503 },
+      { "name": "Osaka", "lat": 34.6937, "lon": 135.5023 },
+      { "name": "Yokohama", "lat": 35.4437, "lon": 139.638 },
+      { "name": "Nagoya", "lat": 35.1815, "lon": 136.9066 },
+      { "name": "Sapporo", "lat": 43.0618, "lon": 141.3545 }
+    ]
+  },
+  {
+    "country": "France",
+    "code": "FR",
+    "cities": [
+      { "name": "Paris", "lat": 48.8566, "lon": 2.3522 },
+      { "name": "Marseille", "lat": 43.2965, "lon": 5.3698 },
+      { "name": "Lyon", "lat": 45.764, "lon": 4.8357 },
+      { "name": "Toulouse", "lat": 43.6047, "lon": 1.4442 },
+      { "name": "Nice", "lat": 43.7102, "lon": 7.262 }
+    ]
+  },
+  {
+    "country": "South Korea",
+    "code": "KR",
+    "cities": [
+      { "name": "Seoul", "lat": 37.5665, "lon": 126.978 },
+      { "name": "Busan", "lat": 35.1796, "lon": 129.0756 },
+      { "name": "Incheon", "lat": 37.4563, "lon": 126.7052 },
+      { "name": "Daegu", "lat": 35.8722, "lon": 128.6014 },
+      { "name": "Daejeon", "lat": 36.3504, "lon": 127.3845 }
+    ]
+  },
+  {
+    "country": "Mexico",
+    "code": "MX",
+    "cities": [
+      { "name": "Mexico City", "lat": 19.4326, "lon": -99.1332 },
+      { "name": "Guadalajara", "lat": 20.6597, "lon": -103.3496 },
+      { "name": "Monterrey", "lat": 25.6866, "lon": -100.3161 },
+      { "name": "Puebla", "lat": 19.0413, "lon": -98.2062 },
+      { "name": "Tijuana", "lat": 32.5149, "lon": -117.0382 }
+    ]
+  },
+  {
+    "country": "Spain",
+    "code": "ES",
+    "cities": [
+      { "name": "Madrid", "lat": 40.4168, "lon": -3.7038 },
+      { "name": "Barcelona", "lat": 41.3851, "lon": 2.1734 },
+      { "name": "Valencia", "lat": 39.4699, "lon": -0.3763 },
+      { "name": "Seville", "lat": 37.3891, "lon": -5.9845 },
+      { "name": "Zaragoza", "lat": 41.6488, "lon": -0.8891 }
+    ]
+  },
+  {
+    "country": "Chile",
+    "code": "CL",
+    "cities": [
+      { "name": "Santiago", "lat": -33.4489, "lon": -70.6693 },
+      { "name": "Valparaíso", "lat": -33.0472, "lon": -71.6127 },
+      { "name": "Concepción", "lat": -36.8201, "lon": -73.0444 },
+      { "name": "La Serena", "lat": -29.9027, "lon": -71.2519 },
+      { "name": "Antofagasta", "lat": -23.65, "lon": -70.4 }
+    ]
+  },
+  {
+    "country": "Colombia",
+    "code": "CO",
+    "cities": [
+      { "name": "Bogotá", "lat": 4.711, "lon": -74.0721 },
+      { "name": "Medellín", "lat": 6.2442, "lon": -75.5812 },
+      { "name": "Cali", "lat": 3.4516, "lon": -76.532 },
+      { "name": "Barranquilla", "lat": 10.9685, "lon": -74.7813 },
+      { "name": "Cartagena", "lat": 10.391, "lon": -75.4794 }
+    ]
+  },
+  {
+    "country": "Costa Rica",
+    "code": "CR",
+    "cities": [
+      { "name": "San José", "lat": 9.9281, "lon": -84.0907 },
+      { "name": "Limón", "lat": 9.9907, "lon": -83.036 },
+      { "name": "Alajuela", "lat": 10.0153, "lon": -84.2146 },
+      { "name": "Heredia", "lat": 9.9976, "lon": -84.1165 },
+      { "name": "Puntarenas", "lat": 9.9763, "lon": -84 }
+    ]
+  }
+]
