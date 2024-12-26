@@ -8,7 +8,6 @@ import LocationInfo from "./location/LocationInfo";
 import ButtonToViews from "../ui/buttons/ButtonToViews";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import NavBarMain from "../navbar/NavBarMain";
-import MusicInfo from "./music/MusicInfo";
 
 const LocationTemperatureMusic = () => {
   //Info of the Weather API depending of each city
@@ -20,7 +19,7 @@ const LocationTemperatureMusic = () => {
   ) : (
     <>
       <NavBarMain />
-      <div className="absolute right-0 left-0 top-44">
+      <div className="absolute right-0 left-0 top-28">
         <LocationInfo />
         <div
           className={`${
@@ -52,6 +51,26 @@ const LocationTemperatureMusic = () => {
             </section>
           </div>
         </div>
+        <section
+          className={`${
+            theme === "light" ? "bg-bright-sun-950" : "bg-bright-sun-400"
+          } mt-4 text-bright-sun-400 w-56 m-auto p-2 rounded-xl`}
+        >
+          <h1
+            className={`${
+              theme === "light" ? "text-bright-sun-400" : "text-bright-sun-950"
+            } font-thin`}
+          >
+            Last Update:
+          </h1>
+          <h1
+            className={`${
+              theme === "light" ? "text-bright-sun-400" : "text-bright-sun-950"
+            } font-medium`}
+          >
+            {weatherData.last_updated}
+          </h1>
+        </section>
 
         {showMessage && (
           <div
@@ -60,7 +79,6 @@ const LocationTemperatureMusic = () => {
             {message}
           </div>
         )}
-        <MusicInfo />
       </div>
     </>
   );

@@ -71,7 +71,7 @@ const FavCitySettings = ({ favoriteCity, idx }) => {
     <>
       <ol
         key={idx}
-        className={`my-4 p-1 w-3/4 rounded-lg flex justify-around items-center m-auto  ${
+        className={`my-4 p-1 w-3/4 rounded-lg flex justify-around items-center m-auto lg:w-1/4  ${
           showFavCityOptions === true
             ? "bg-bright-sun-200"
             : "bg-bright-sun-950"

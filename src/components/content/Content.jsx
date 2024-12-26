@@ -7,6 +7,7 @@ import { faPlay } from "@fortawesome/free-solid-svg-icons/faPlay";
 
 const Content = () => {
   const { checkCityInfo, weatherData, theme } = useContext(MusicWeatherContext);
+  console.log(weatherData.toString().length);
   return (
     <section
       className={`${
@@ -18,7 +19,9 @@ const Content = () => {
       <div className="text-dark text-center flex flex-col items-center justify-center h-screen">
         <MainTitle />
         <SectionCityCountry />
-        {weatherData && <ButtonToViews handler={checkCityInfo} icon={faPlay} />}
+        {weatherData.toString().length > 0 && (
+          <ButtonToViews handler={checkCityInfo} icon={faPlay} />
+        )}
       </div>
     </section>
   );
