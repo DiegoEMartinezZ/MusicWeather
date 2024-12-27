@@ -17,7 +17,12 @@ const Content = () => {
       } h-screen text-center `}
     >
       <div className="text-dark text-center flex flex-col items-center justify-center h-screen">
-        <MainTitle />
+        <img
+          src={`${
+            theme === "light" ? "/img/logoLight.png" : "/img/logoDark.png"
+          } `}
+        />
+
         <SectionCityCountry />
         {weatherData.toString().length > 0 && (
           <ButtonToViews handler={checkCityInfo} icon={faPlay} />
