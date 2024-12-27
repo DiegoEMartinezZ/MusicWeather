@@ -247,15 +247,6 @@ const MusicWeatherProvider = ({ children }) => {
           setShowMessage(false);
         }, 2000);
       });
-    } else {
-      navigator.clipboard.writeText(cityName).then(() => {
-        setBtnFlag(true);
-        setMessage(`${cityName} Removed from favorite cities!`);
-        setShowMessage(true);
-        setTimeout(() => {
-          setShowMessage(false);
-        }, 2000);
-      });
     }
   };
 
@@ -281,6 +272,7 @@ const MusicWeatherProvider = ({ children }) => {
         setWeatherData,
         checkCityInfo,
         btnFlag,
+        setBtnFlag,
         favCity,
         showMessage,
         message,

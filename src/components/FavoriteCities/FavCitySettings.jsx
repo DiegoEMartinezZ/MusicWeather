@@ -16,6 +16,7 @@ const FavCitySettings = ({ favoriteCity, idx }) => {
     goToInfo,
     setLocationData,
     deleteFavCity,
+    setBtnFlag,
   } = useContext(MusicWeatherContext);
   const [showFavCityOptions, setShowFavCityOptions] = useState(false);
 
@@ -53,6 +54,7 @@ const FavCitySettings = ({ favoriteCity, idx }) => {
 
         // Destructure and set the data
         const { current: weatherData, location: locationData } = response.data;
+        setBtnFlag(false);
         setWeatherData(weatherData);
         setLocationData(locationData);
 
