@@ -1,5 +1,4 @@
 import React, { useContext } from "react";
-import MainTitle from "../ui/txt/MainTitle";
 import SectionCityCountry from "../sectionCityCountry/SectionCityCountry";
 import { MusicWeatherContext } from "../context/MusicWeatherContext";
 import ButtonToViews from "../ui/buttons/ButtonToViews";
@@ -7,7 +6,6 @@ import { faPlay } from "@fortawesome/free-solid-svg-icons/faPlay";
 
 const Content = () => {
   const { checkCityInfo, weatherData, theme } = useContext(MusicWeatherContext);
-  console.log(weatherData.toString().length);
   return (
     <section
       className={`${
@@ -21,6 +19,7 @@ const Content = () => {
           src={`${
             theme === "light" ? "/img/logoLight.png" : "/img/logoDark.png"
           } `}
+          className="w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/5 xl:w-1/5"
         />
 
         <SectionCityCountry />

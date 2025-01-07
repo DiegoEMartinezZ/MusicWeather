@@ -239,14 +239,12 @@ const MusicWeatherProvider = ({ children }) => {
     setArrayFavCities([...arrayFavCities, cityName]);
 
     if (btnFlag === true) {
-      navigator.clipboard.writeText(cityName).then(() => {
-        setBtnFlag(false);
-        setMessage(`${cityName} Added to favorite cities!`);
-        setShowMessage(true);
-        setTimeout(() => {
-          setShowMessage(false);
-        }, 2000);
-      });
+      setBtnFlag(false);
+      setMessage(`${cityName} Added to favorite cities!`);
+      setShowMessage(true);
+      setTimeout(() => {
+        setShowMessage(false);
+      }, 2000);
     }
   };
 
