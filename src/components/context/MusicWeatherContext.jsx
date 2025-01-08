@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { createContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import countryDB from "../../test/weather-test.json";
+import { getBackgroundImage } from "../../utils/getBackgroundImage";
 
 const MusicWeatherContext = createContext();
 
@@ -18,6 +19,8 @@ const MusicWeatherProvider = ({ children }) => {
     setCityName("");
     setWeatherData([]);
     setBtnFlag(true);
+    setBackgrounds({ sm: "", md: "", lg: "" });
+    setIsDay(null);
   };
 
   const goToInfo = () => {
@@ -81,49 +84,53 @@ const MusicWeatherProvider = ({ children }) => {
   */
   //
 
+  // useState to change dynamically the backgorund image when day is night or daylight
+  const [isDay, setIsDay] = useState(null);
+  const [backgrounds, setBackgrounds] = useState({ sm: "", md: "", lg: "" });
+
   useEffect(() => {
-    // Ensure the correct backend URL is used
     const BACKEND_URL =
       import.meta.env.VITE_BACKEND_URL || "http://localhost:5000";
 
-    // Filter cities by country code
     const countryByCode = countryDB.find(
       (country) => country.code === countryCode
     );
-
-    // If country is found, extract cities; otherwise, set an empty array
     const cities = countryByCode ? countryByCode.cities : [];
     setCitiesArray(cities);
 
-    // Function to fetch weather data for a given city
     const fetchWeatherData = async (cityName) => {
-      if (!cityName) return; // Ensure cityName is valid
+      if (!cityName) return;
 
       try {
-        // Make the API call to the backend
         const response = await axios.get(`${BACKEND_URL}/api/weather`, {
           params: { city: cityName },
         });
 
-        // Destructure the response data
         const { location, current } = response.data;
+        const isDay = current.is_day;
 
-        // Update state with the fetched data
         setWeatherData(current);
         setLocationData(location);
+        setIsDay(isDay);
 
-        console.log("Location:", location);
-        console.log("Current Weather:", current);
+        const bg = getBackgroundImage(isDay);
+        console.log("Generated background:", bg);
+
+        setBackgrounds(bg); // Update state
       } catch (error) {
         console.error("Error fetching weather data:", error.message);
       }
     };
 
-    // Fetch weather data if a valid cityName exists
     if (cityName) {
       fetchWeatherData(cityName);
     }
   }, [countryCode, cityName]);
+
+  // Monitor `backgrounds` updates
+  useEffect(() => {
+    console.log("Background state updated:", backgrounds);
+  }, [backgrounds]);
 
   //
   /*
@@ -278,6 +285,8 @@ const MusicWeatherProvider = ({ children }) => {
         locationData,
         setLocationData,
         deleteFavCity,
+        backgrounds,
+        isDay,
       }}
     >
       {children}

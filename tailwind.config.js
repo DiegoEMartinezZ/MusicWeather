@@ -2,7 +2,17 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        "night-sm": "url('/src/assets/backgrounds/night_sm.png')",
+        "night-md": "url('/src/assets/backgrounds/night_md.png')",
+        "night-lg": "url('/src/assets/backgrounds/night_lg.png')",
+        "daylight-sm": "url('/src/assets/backgrounds/daylight_sm.png')",
+        "daylight-md": "url('/src/assets/backgrounds/daylight_md.png')",
+        "daylight-lg": "url('/src/assets/backgrounds/daylight_lg.png')",
+      },
+    },
+
     colors: {
       "bright-sun": {
         50: "#fefbe8",
