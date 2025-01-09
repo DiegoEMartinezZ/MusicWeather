@@ -114,7 +114,6 @@ const MusicWeatherProvider = ({ children }) => {
         setIsDay(isDay);
 
         const bg = getBackgroundImage(isDay);
-        console.log("Generated background:", bg);
 
         setBackgrounds(bg); // Update state
       } catch (error) {
@@ -126,11 +125,6 @@ const MusicWeatherProvider = ({ children }) => {
       fetchWeatherData(cityName);
     }
   }, [countryCode, cityName]);
-
-  // Monitor `backgrounds` updates
-  useEffect(() => {
-    console.log("Background state updated:", backgrounds);
-  }, [backgrounds]);
 
   //
   /*
@@ -287,6 +281,7 @@ const MusicWeatherProvider = ({ children }) => {
         deleteFavCity,
         backgrounds,
         isDay,
+        setIsDay,
       }}
     >
       {children}

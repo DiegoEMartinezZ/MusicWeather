@@ -23,6 +23,7 @@ const LocationTemperatureMusic = () => {
   } = useContext(MusicWeatherContext);
 
   console.log(backgrounds);
+  console.log(isDay);
 
   return weatherData < 0 ? (
     <Page401 />
@@ -48,7 +49,7 @@ const LocationTemperatureMusic = () => {
           <div
             className={` ${
               theme === "light" ? "text-bright-sun-950" : "text-bright-sun-400"
-            } flex items-center justify-center rounded-full w-64 h-64 mt-6 mb-10 m-auto border-8 border-bright-sun-50`}
+            } bg-bright-sun-200/50 flex items-center justify-center rounded-full w-64 h-64 mt-6 mb-10 m-auto border-8 border-bright-sun-50`}
           >
             <div className="flex flex-col">
               <h1>{weatherData.condition.text}</h1>
@@ -68,30 +69,6 @@ const LocationTemperatureMusic = () => {
               </section>
             </div>
           </div>
-          <section
-            className={`${
-              theme === "light" ? "bg-bright-sun-950" : "bg-bright-sun-400"
-            } mt-4 text-bright-sun-400 w-56 m-auto p-2 rounded-xl`}
-          >
-            <h1
-              className={`${
-                theme === "light"
-                  ? "text-bright-sun-400"
-                  : "text-bright-sun-950"
-              } font-thin`}
-            >
-              Last Update:
-            </h1>
-            <h1
-              className={`${
-                theme === "light"
-                  ? "text-bright-sun-400"
-                  : "text-bright-sun-950"
-              } font-medium`}
-            >
-              {weatherData.last_updated}
-            </h1>
-          </section>
 
           {showMessage && (
             <div
