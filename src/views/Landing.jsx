@@ -13,7 +13,7 @@ const Landing = () => {
           <img
             src="/img/logoLight.png"
             alt="logo music weather"
-            className="w-1/2 md:w-1/3 lg:w-1/4"
+            className="w-1/2 md:w-1/3 lg:w-1/4 xl:w-72"
           />
           <ButtonToViews icon={faPlay} handler={goToHome} />
           <Footer />

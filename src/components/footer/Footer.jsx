@@ -6,12 +6,19 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import SocialMedia from "../socialMedia/SocialMedia";
+import { MusicWeatherContext } from "../context/MusicWeatherContext";
 
 const Footer = () => {
+  const { theme } = useContext(MusicWeatherContext);
+
   return (
     <>
-      <footer className="absolute w-auto border-bright-sun-50 bg-black text-bright-sun-200 bottom-3 mx-2 right-0 left-0 text-center p-3 mb-5 rounded-lg text-xs italic font-light lg:w-1/3 lg:block lg:m-auto">
-        <div className="p-3 flex justify-around">
+      <footer
+        className={` ${
+          theme === "light" ? "text-bright-sun-950" : "text-bright-sun-600"
+        } absolute w-auto border-bright-sun-50 bottom-3 mx-2 right-0 left-0 text-center p-3 mb-5 rounded-lg text-xs italic font-light lg:w-1/3 lg:block lg:m-auto`}
+      >
+        <div className={`p-3 flex justify-around`}>
           <SocialMedia
             name={faInstagram}
             url={"https://www.instagram.com/lowoncyan_"}

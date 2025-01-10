@@ -21,6 +21,7 @@ const MusicWeatherProvider = ({ children }) => {
     setBtnFlag(true);
     setBackgrounds({ sm: "", md: "", lg: "" });
     setIsDay(null);
+    setHumidity(null);
   };
 
   const goToInfo = () => {
@@ -86,17 +87,12 @@ const MusicWeatherProvider = ({ children }) => {
 
   // useState to change dynamically the backgorund image when day is night or daylight
   const [isDay, setIsDay] = useState(null);
+  const [humidity, setHumidity] = useState(null);
   const [backgrounds, setBackgrounds] = useState({ sm: "", md: "", lg: "" });
 
   useEffect(() => {
     const BACKEND_URL =
       import.meta.env.VITE_BACKEND_URL || "http://localhost:5000";
-
-    const countryByCode = countryDB.find(
-      (country) => country.code === countryCode
-    );
-    const cities = countryByCode ? countryByCode.cities : [];
-    setCitiesArray(cities);
 
     const fetchWeatherData = async (cityName) => {
       if (!cityName) return;
@@ -107,24 +103,40 @@ const MusicWeatherProvider = ({ children }) => {
         });
 
         const { location, current } = response.data;
-        const isDay = current.is_day;
 
-        setWeatherData(current);
         setLocationData(location);
-        setIsDay(isDay);
-
-        const bg = getBackgroundImage(isDay);
-
-        setBackgrounds(bg); // Update state
+        setWeatherData(current);
+        setHumidity(current.humidity);
+        setIsDay(current.is_day);
       } catch (error) {
         console.error("Error fetching weather data:", error.message);
       }
     };
 
+    if (countryCode) {
+      const countryByCode = countryDB.find(
+        (country) => country.code === countryCode
+      );
+      const cities = countryByCode ? countryByCode.cities : [];
+      setCitiesArray(cities);
+    }
+
     if (cityName) {
       fetchWeatherData(cityName);
     }
   }, [countryCode, cityName]);
+
+  //
+  /*
+  Update the background image depending of the humidity and time of day
+  */
+  //
+  useEffect(() => {
+    if (isDay !== null && humidity !== null) {
+      const background = getBackgroundImage(isDay, humidity);
+      setBackgrounds(background);
+    }
+  }, [isDay, humidity]);
 
   //
   /*
@@ -282,6 +294,8 @@ const MusicWeatherProvider = ({ children }) => {
         backgrounds,
         isDay,
         setIsDay,
+        humidity,
+        setHumidity,
       }}
     >
       {children}

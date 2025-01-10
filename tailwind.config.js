@@ -4,12 +4,31 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        "night-sm": "url('/src/assets/backgrounds/night_sm.png')",
-        "night-md": "url('/src/assets/backgrounds/night_md.png')",
-        "night-lg": "url('/src/assets/backgrounds/night_lg.png')",
-        "daylight-sm": "url('/src/assets/backgrounds/daylight_sm.png')",
-        "daylight-md": "url('/src/assets/backgrounds/daylight_md.png')",
-        "daylight-lg": "url('/src/assets/backgrounds/daylight_lg.png')",
+        //night - cold
+        "night-cold-sm": "url('/src/assets/backgrounds/night_cold_sm.png')",
+        "night-cold-md": "url('/src/assets/backgrounds/night_cold_md.png')",
+        "night-cold-lg": "url('/src/assets/backgrounds/night_cold_lg.png')",
+        //night - warm
+        "night-warm-sm": "url('/src/assets/backgrounds/night_warm_sm.png')",
+        "night-warm-md": "url('/src/assets/backgrounds/night_warm_md.png')",
+        "night-warm-lg": "url('/src/assets/backgrounds/night_warm_lg.png')",
+        //night - sunny
+        "night-sunny-sm": "url('/src/assets/backgrounds/night_sunny_sm.png')",
+        "night-sunny-md": "url('/src/assets/backgrounds/night_sunny_md.png')",
+        "night-sunny-lg": "url('/src/assets/backgrounds/night_sunny_lg.png')",
+
+        //day - cold
+        "day-cold-sm": "url('/src/assets/backgrounds/day_cold_sm.png')",
+        "day-cold-md": "url('/src/assets/backgrounds/day_cold_md.png')",
+        "day-cold-lg": "url('/src/assets/backgrounds/day_cold_lg.png')",
+        //day - warm
+        "day-warm-sm": "url('/src/assets/backgrounds/day_warm_sm.png')",
+        "day-warm-md": "url('/src/assets/backgrounds/day_warm_md.png')",
+        "day-warm-lg": "url('/src/assets/backgrounds/day_warm_lg.png')",
+        //day - sunny
+        "day-sunny-sm": "url('/src/assets/backgrounds/day_sunny_sm.png')",
+        "day-sunny-md": "url('/src/assets/backgrounds/day_sunny_md.png')",
+        "day-sunny-lg": "url('/src/assets/backgrounds/day_sunny_lg.png')",
       },
     },
 

@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { MusicWeatherContext } from "../context/MusicWeatherContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDroplet } from "@fortawesome/free-solid-svg-icons/faDroplet";
@@ -13,28 +13,39 @@ const LocationTemperatureMusic = () => {
   //Info of the Weather API depending of each city
   const {
     weatherData,
-    theme,
     favCity,
     showMessage,
     message,
     btnFlag,
-    backgrounds,
     isDay,
+    humidity,
   } = useContext(MusicWeatherContext);
 
-  console.log(backgrounds);
-  console.log(isDay);
+  const getBackgroundClass = (isDay, humidity) => {
+    if (isDay === 0 && humidity >= 60) return "bg-night-cold";
+    if (isDay === 1 && humidity >= 60) return "bg-day-cold";
+    if (isDay === 0 && humidity >= 30 && humidity < 60) return "bg-night-warm";
+    if (isDay === 1 && humidity >= 30 && humidity < 60) return "bg-day-warm";
+    if (isDay === 0 && humidity < 30) return "bg-night-sunny";
+    return "bg-day-sunny";
+  };
+
+  const responsiveClasses = `${getBackgroundClass(
+    isDay,
+    humidity
+  )}-sm md:${getBackgroundClass(isDay, humidity)}-md lg:${getBackgroundClass(
+    isDay,
+    humidity
+  )}`;
+
+  console.log(responsiveClasses);
 
   return weatherData < 0 ? (
     <Page401 />
   ) : (
     <>
       <div
-        className={`absolute right-0 left-0 w-full h-screen bg-cover bg-center ${
-          isDay == 0
-            ? "bg-night-sm md:bg-night-md lg:bg-night-lg"
-            : "bg-daylight-sm md:bg-daylight-md lg:bg-daylight-lg"
-        }`}
+        className={`absolute right-0 left-0 w-full h-screen bg-cover bg-center ${responsiveClasses}`}
       >
         <NavBarMain />
         <div className="mt-12">
@@ -46,11 +57,7 @@ const LocationTemperatureMusic = () => {
           >
             <ButtonToViews icon={faStar} handler={favCity} />
           </div>
-          <div
-            className={` ${
-              theme === "light" ? "text-bright-sun-950" : "text-bright-sun-400"
-            } bg-bright-sun-200/50 flex items-center justify-center rounded-full w-64 h-64 mt-6 mb-10 m-auto border-8 border-bright-sun-50`}
-          >
+          <div className=" text-bright-sun-950 bg-bright-sun-200/50 flex items-center justify-center rounded-full w-64 h-64 mt-6 mb-10 m-auto border-8 border-bright-sun-50">
             <div className="flex flex-col">
               <h1>{weatherData.condition.text}</h1>
               <h1 className="font-medium  text-7xl">

@@ -5,13 +5,13 @@ import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import { MusicWeatherContext } from "../../context/MusicWeatherContext";
 
 const LocationInfo = () => {
-  const { locationData, theme } = useContext(MusicWeatherContext);
+  const { locationData, isDay } = useContext(MusicWeatherContext);
 
   return (
     <>
       <section
         className={`pb-3 flex flex-col ${
-          theme === "light" ? "text-bright-sun-950" : "text-bright-sun-400"
+          isDay == 0 ? "text-bright-sun-400" : "text-bright-sun-950"
         } justify-center items-center 2xl:mt-24`}
       >
         <Title title={locationData.name} />
