@@ -26,18 +26,15 @@ const NavBarMain = () => {
       <FontAwesomeIcon
         icon={faArrowLeft}
         onClick={goToHome}
-        className={`${
-          theme === "light" ? "text-bright-sun-950" : "text-bright-sun-400"
-        } mx-4 cursor-pointer `}
+        className="text-bright-sun-950
+         mx-4 cursor-pointer"
       />
       <div>
-        <DarkMode />
         <FontAwesomeIcon
           icon={conditionSettings}
           onClick={visibleSettings}
-          className={`${
-            theme === "light" ? "text-bright-sun-950" : "text-bright-sun-400"
-          } mx-4 cursor-pointer `}
+          className="text-bright-sun-950
+           mx-4 cursor-pointer "
         />
       </div>
 

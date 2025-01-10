@@ -14,9 +14,9 @@ const Footer = () => {
   return (
     <>
       <footer
-        className={` ${
-          theme === "light" ? "text-bright-sun-950" : "text-bright-sun-600"
-        } absolute w-auto border-bright-sun-50 bottom-3 mx-2 right-0 left-0 text-center p-3 mb-5 rounded-lg text-xs italic font-light lg:w-1/3 lg:block lg:m-auto`}
+        className="
+          text-bright-sun-950
+       absolute w-auto border-bright-sun-50 bottom-3 mx-2 right-0 left-0 text-center p-3 mb-5 rounded-lg text-xs italic font-light lg:w-1/3 lg:block lg:m-auto"
       >
         <div className={`p-3 flex justify-around`}>
           <SocialMedia
