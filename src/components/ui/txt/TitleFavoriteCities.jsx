@@ -1,11 +1,12 @@
 import React from "react";
-import Title from "./Title";
 
-const TitleFavoriteCities = () => {
+const TitleFavoriteCities = ({ favCity }) => {
   return (
-    <div className="w-full h-auto py-1">
-      <Title title={"Favorite Cities"} />
-    </div>
+    <>
+      <div className="flex  items-center justify-center">
+        <h1 className="text-3xl font-bold">{favCity} </h1>
+      </div>
+    </>
   );
 };
 

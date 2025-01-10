@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
 import NavbarSettings from "../components/navbar/NavbarSettings";
 import { MusicWeatherContext } from "../components/context/MusicWeatherContext";
-import TitleFavoriteCities from "../components/ui/txt/TitleFavoriteCities";
 import FavoriteCity from "../components/FavoriteCities/FavoriteCity";
+import Title from "../components/ui/txt/Title";
 
 const FavoriteCities = () => {
   const { theme } = useContext(MusicWeatherContext);
@@ -15,7 +15,7 @@ const FavoriteCities = () => {
       }  h-screen text-center `}
     >
       <NavbarSettings />
-      <TitleFavoriteCities />
+      <Title title={"My Favorite Cities"} />
       <FavoriteCity />
     </section>
   );

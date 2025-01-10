@@ -21,7 +21,7 @@ const MusicWeatherProvider = ({ children }) => {
     setBtnFlag(true);
     setBackgrounds({ sm: "", md: "", lg: "" });
     setIsDay(null);
-    setHumidity(null);
+    setIsHumidity(null);
   };
 
   const goToInfo = () => {
@@ -87,7 +87,7 @@ const MusicWeatherProvider = ({ children }) => {
 
   // useState to change dynamically the backgorund image when day is night or daylight
   const [isDay, setIsDay] = useState(null);
-  const [humidity, setHumidity] = useState(null);
+  const [isHumidity, setIsHumidity] = useState(null);
   const [backgrounds, setBackgrounds] = useState({ sm: "", md: "", lg: "" });
 
   useEffect(() => {
@@ -106,8 +106,8 @@ const MusicWeatherProvider = ({ children }) => {
 
         setLocationData(location);
         setWeatherData(current);
-        setHumidity(current.humidity);
         setIsDay(current.is_day);
+        setIsHumidity(current.humidity);
       } catch (error) {
         console.error("Error fetching weather data:", error.message);
       }
@@ -132,11 +132,11 @@ const MusicWeatherProvider = ({ children }) => {
   */
   //
   useEffect(() => {
-    if (isDay !== null && humidity !== null) {
-      const background = getBackgroundImage(isDay, humidity);
-      setBackgrounds(background);
+    if (isDay !== null && isHumidity !== null) {
+      const bg = getBackgroundImage(isDay, isHumidity);
+      setBackgrounds(bg);
     }
-  }, [isDay, humidity]);
+  }, [isDay, isHumidity]);
 
   //
   /*
@@ -294,8 +294,8 @@ const MusicWeatherProvider = ({ children }) => {
         backgrounds,
         isDay,
         setIsDay,
-        humidity,
-        setHumidity,
+        isHumidity,
+        setIsHumidity,
       }}
     >
       {children}

@@ -18,34 +18,32 @@ const LocationTemperatureMusic = () => {
     message,
     btnFlag,
     isDay,
-    humidity,
+    isHumidity,
   } = useContext(MusicWeatherContext);
 
-  const getBackgroundClass = (isDay, humidity) => {
-    if (isDay === 0 && humidity >= 60) return "bg-night-cold";
-    if (isDay === 1 && humidity >= 60) return "bg-day-cold";
-    if (isDay === 0 && humidity >= 30 && humidity < 60) return "bg-night-warm";
-    if (isDay === 1 && humidity >= 30 && humidity < 60) return "bg-day-warm";
-    if (isDay === 0 && humidity < 30) return "bg-night-sunny";
-    return "bg-day-sunny";
+  const getBackgroundClass = (isDay, isHumidity) => {
+    console.log(isDay, isHumidity);
+    // Determine the background based on humidity and time of day
+    if (isHumidity >= 60) {
+      return isDay ? "bg-day-cold" : "bg-night-cold";
+    }
+    if (isHumidity >= 30) {
+      return isDay ? "bg-day-warm" : "bg-night-warm";
+    }
+    return isDay ? "bg-day-sunny" : "bg-night-sunny";
   };
 
-  const responsiveClasses = `${getBackgroundClass(
-    isDay,
-    humidity
-  )}-sm md:${getBackgroundClass(isDay, humidity)}-md lg:${getBackgroundClass(
-    isDay,
-    humidity
-  )}`;
+  const responsiveClasses = `${getBackgroundClass(isDay, isHumidity)}-sm 
+  md:${getBackgroundClass(isDay, isHumidity)}-md 
+  lg:${getBackgroundClass(isDay, isHumidity)}-lg`;
 
-  console.log(responsiveClasses);
-
+  console.log(getBackgroundClass(isDay, isHumidity));
   return weatherData < 0 ? (
     <Page401 />
   ) : (
     <>
       <div
-        className={`absolute right-0 left-0 w-full h-screen bg-cover bg-center ${responsiveClasses}`}
+        className={`absolute inset-0 w-full h-screen bg-cover bg-center ${responsiveClasses}`}
       >
         <NavBarMain />
         <div className="mt-12">

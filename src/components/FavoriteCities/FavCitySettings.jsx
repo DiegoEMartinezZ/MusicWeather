@@ -18,7 +18,7 @@ const FavCitySettings = ({ favoriteCity, idx }) => {
     deleteFavCity,
     setBtnFlag,
     setIsDay,
-    setHumidity,
+    setIsHumidity,
   } = useContext(MusicWeatherContext);
   const [showFavCityOptions, setShowFavCityOptions] = useState(false);
 
@@ -56,13 +56,11 @@ const FavCitySettings = ({ favoriteCity, idx }) => {
 
         // Destructure and set the data
         const { current: weatherData, location: locationData } = response.data;
-        const isDay = weatherData.is_day;
-        const hum = weatherData.humidity;
         setBtnFlag(false);
         setWeatherData(weatherData);
         setLocationData(locationData);
-        setIsDay(isDay);
-        setHumidity(hum);
+        setIsDay(weatherData.is_day);
+        setIsHumidity(weatherData.humidity);
 
         // Navigate to the information page after successful fetch
         goToInfo();

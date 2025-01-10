@@ -2,12 +2,12 @@ import React, { useContext } from "react";
 import { MusicWeatherContext } from "../../context/MusicWeatherContext";
 
 const Title = ({ title }) => {
-  const { isDay } = useContext(MusicWeatherContext);
+  const { theme } = useContext(MusicWeatherContext);
   return (
     <>
       <div
         className={`${
-          isDay == 0 ? "text-bright-sun-400" : "text-bright-sun-950"
+          theme == "light" ? "text-bright-sun-950" : "text-bright-sun-500"
         } flex items-center justify-center `}
       >
         <h1 className="text-3xl font-bold">{title} </h1>
